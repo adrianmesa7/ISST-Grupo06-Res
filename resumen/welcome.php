@@ -36,6 +36,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
             font-family: 'Garamond', arial;
             font-size: 18px;
             text-shadow: 4px 4px 4px #aaa;
+			color: black;
             }
 
 		.titleResu {
@@ -66,21 +67,22 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
             padding: 0 8px 0 8px;
         }
 		
+		
 		a { color: white}
 		
         div#main {padding: 10px;}
         input {margin-bottom: 5px; margin-top: 2px; padding: 4px; font-size: 12px; }
         h1 {background: var(--primary); color: white; font-weight: 300; text-transform: uppercase; font-size: 20px; margin: 0px; padding: 15px;}
-        h2 { margin-block-start: 0px; margin-block-end: 10px; font-size: 20px;  color: var(--primary); position:center;}
+        h2 { margin-block-start: 0px; margin-block-end: 10px; font-size: 20px; position:center;}
         button:hover { background: var(--primary); color: white; }
         div.actions { margin-top: 10px; text-align: center; font-size: 16px;}
         div.movie { background-color: rgba(227, 206, 193, 0.75);  display: inline-block; width: auto; padding: 10px; box-shadow: 2px 2px 7px #020a0e; margin: 5px;}
         div.movie div.movie-img {width: 200px; height: auto; min-height: 200px; cursor: pointer; border-color: #020a0e;} 
         div.movie div.movie-img img {align-items: center; width: inherit; height: 160px;}
         div.movie div.title {text-align: center; overflow: hidden; text-overflow: ellipsis; width: 200px; white-space: nowrap; }
-        div.field {color: var(--primary); text-transform: uppercase; font-size: 12px;}
+        div.field {color: black; text-transform: uppercase; font-size: 12px;}
         div.textoresu {margin-left: 250px; margin-right: 250px; text-align: justify;}
-		div.textoresucontainer {background-color:rgba(227, 206, 193, 0.75); box-shadow: 2px 2px 7px #020a0e;}
+		div.textoresucontainer {background-color:rgba(227, 206, 193, 0.75); box-shadow: 2px 2px 7px #020a0e; color: black;}
         .cuadro {width: 300px; height: 200px;}
         .titulo {width: 300px;}
     
@@ -120,22 +122,26 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
             autor: "Miguel de Cervantes", 
             miniatura: "files/quijote.png", 
             resu:"Desde hace 400 años, hay un caballero andante en la literatura mundial que, de hecho, no lo es: Don Quijote de la Mancha, el Caballero de la Triste Figura, que vive aventuras donde no las hay. Toma a molinos de viento por gigantes, rebaños de ovejas por ejércitos enemigos, toneles de vino también por gigantes, posadas por fortalezas y a una sencilla campesina por su distinguida señora. Don Quijote es víctima de su pasión literaria, de su exagerada afición por leer novelas de caballería. Todos los niños conocen al menos uno de sus numerosos episodios; enfrentarse a molinos de viento, por ejemplo, existe hoy en día como expresión. Pero, ¿qué hace a esta novela, supuestamente cómica y de más de 1000 páginas, estar considerada no sólo como la obra maestra de la literatura española, sino también haber sido confirmada como mejor novela del mundo por el instituto Nobel en 2002? Son sus distintos niveles de narración, relacionados entre ellos de forma magistral y de entre cuyos renglones se desprende cierta sabiduría, junto a una acertada parodia y el monumental inventario de temas y de personajes lo que convierten a la obra de Cervantes en novela universal en el mejor de los sentidos. Don Quijote fascina a toda persona dotada de fantasía, que se evade con libros o películas, si bien la obra muestra al mismo tiempo lo cómico que puede llegar a ser esta forma de huir del mundo.",
-            audio: "files/donquijote.mp3" 
+            audio: "files/donquijote.mp3" ,
+			escritor: "Juan Ramirez"
         },
 
             {titulo: "La Celestina",
             autor: "Fernando de Rojas",
             miniatura: "files/celestina.png",
             resu:"Calisto entra afanado al huerto de la casa de Melibea buscando su halcón. Él es un joven de noble linaje y se enamora a primera vista de ella, la única heredera de una familia que la mantiene encerrada en casa. Enloquecido de amor Calisto comienza a expresarle a la mujer sus sentimientos con lisonjas y dulces palabras, pero ella lo rechaza. Abatido regresa a casa y le cuenta sus pesares a uno de sus criados. Sempronio, el criado, le sugiere que recurra a una vieja prostituta y alcahueta profesional llamada Celestina. Ésta se hace pasar por vendedora de artículos diversos para entrar en las casas y organizar citas de amantes. También regenta un burdel con dos prostitutas, Areúsa y Elicia.Pármeno, otro criado de Calisto, cuya madre conocía a Celestina, trata de disuadirlo: tenía para remediar amores y para se querer bien: tenía huessos de coraçón de ciervo, lengua de bívora, cabeças de cordonizes . . . Venían a ella muchos hombre y mujeres, y a unos demadava el pan do mordían, a otros, de su ropa; a otros, de su sus cabellos . . . a otros dava unos coraçones de cera, llenos de agujas quebradas, y a otras cosas en barro y en plomo fechas, muy espantables a ver. Pintava figuras, dezía palabras en tierra. ¿Quién te podrá dezir lo que esta vieja hazía? Y todo era burla y mentira. A pesar de las razones de Pármeno, Calisto no le hace caso e insiste en su deseo de poseer a Melibea. De notar que la ansiedad por Melibea no es el amor puro ni el matrimonio, sino el acto carnal. Celestina conjura al diablo para hechizar a Melibea y hacer que se enamore de Calisto. Y como promesa va a recibir a cambio de su trabajo una considerable suma de dinero. Celestina, sagaz como un zorro,  también logra corromper a Pármeno cuando una de sus prostitutas, Areúsa, lo seduce y lo pone en el bando de la vieja. Elicia, la otra prostituta, es la amante de Sempronio. Con el pretexto de venderle hilado a Melibea, logra entrar en su casa y se queda con un cordón de ella que usa para completar el hechizo. Aunque al inicio Melibea no es receptiva a las palabras que Celestina pronuncia acerca de Calisto, se acuerda una segunda reunión con ella ya que Melibea se siente culpable por haber tratado mal a la vieja. Además, como el hilo es parte del encantamiento apenas Melibea lo toca comienza a sentir algo por Calisto acuerda una cita con él a través de la vieja alcahueta. La Celestina acuerda una cita a la media noche para que los jóvenes se puedan ver. Celestina corre donde Calisto a darle las buenas nuevas y este, emocionado, le da el pago en una valiosa cadena de oro. El primer encuentro de los jóvenes es breve pero lleno de pasión. Se acuerda otra reunión en la noche siguiente para poder pasar más rato juntos. Así, a la noche siguiente, Calisto escala los muros que los conducen a la habitación de Melibea, donde satisfacen su deseo carnal. Melibea se debate entre haber pedido su honor con un hombre al que apenas conoce y sin estar casada, y además por cuenta de un encantamiento de hechicería; pareciera que su culpa se empequeñece respecto al fuertísimo deseo carnal que los une. Al mismo tiempo, los criados acuden a donde Celestina por su parte del pago. La mujer se niega a compartir y los criados se vengan de ella matándola. Sempronio y Pármeno serán juzgados y eventualmente mueren decapitados en la plaza pública.",
-            audio: "files/donquijote.mp3" 
+            audio: "files/donquijote.mp3" ,
+			escritor: "Andres Lopez"
         },
 
             {titulo: "El principito", 
             autor: "Antoine de Saint-Exupéry", 
             miniatura: "files/principito.png",
             resu:"El principito narra la historia de un piloto que, mientras intenta reparar su avión averiado en medio del desierto del Sahara, se topa con un pequeño príncipe proveniente del asteroide B 612, que le pide insistentemente que le dibuje un cordero y que nunca olvida una pregunta.El piloto empezará a descubrir la fascinante historia del principito, que comienza en su asteroide, donde vivía con tres volcanes, uno inactivo, y se entretenía en arrancar las malas hierbas y ver puestas de sol. Un día en el suelo del asteroide del principito nace una flor. El principito la cuida y atiende con dedicación, pero la flor es dramática y caprichosa, y esto le molesta. El principito entonces decide abandonar su asteroide y emprender un viaje por el universo en busca de un amigo. En la travesía, que llevará al principito a visitar varios asteroides hasta llegar al la Tierra, conocerá a una variado grupo de excéntricos personajes que lo convencen de lo extraño que es el mundo de los adultos, tan ocupados siempre en asuntos serios e importantes, que se olvidan de disfrutar la vida. En la Tierra, el principito entrará en contacto con animales, flores y personas. Será allí donde, antes de encontrar al piloto, conocerá al zorro, quien le revelará la importancia de la amistad y el valor del amor que siente hacia su flor. Será la nostalgia por ella y la decepción que le causa el mundo de los adultos lo que motivará al principito a regresar a su planeta.",
-            audio: "files/donquijote.mp3"
+            audio: "files/donquijote.mp3",
+			escritor: "Pedro Sanchez"
          },
+		 
         ];
 
         localStorage.mis_resumenes = localStorage.mis_resumenes || JSON.stringify(mis_resumenes_iniciales);
@@ -212,7 +218,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
                 
              </p>
              <p>
-                <img src="${resumen.miniatura}">
+                <img src="${resumen.miniatura}" width="auto" height="200px">
             </p> 
            
             <p>    
@@ -225,6 +231,8 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
             <p>
                 ${resumen.resu}
             </p>
+			
+			<p> <b>Escritor:</b> ${resumen.escritor}</p>
 			
             <p style="margin-top: 50px"> Valoración: </p>
             <p class="clasificacion">
@@ -253,6 +261,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
             // ...
 
             return `
+			<div class="textoresucontainer" style="margin-left: 700px; margin-right: 700px;">
 			<h2>Añadir resumen</h2>
              <div class="field">
                 Título <br>
@@ -272,7 +281,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
                 </div>
                 <div class="field">
                 Resumen <br>
-                <input  type="text" id="resu" class="cuadro">
+                <input  type="file" id="resu">
                 </div>
                 <div class="field">
                 Audio <br>
@@ -281,7 +290,8 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
                 <div class="actions">
                     <button class="index">Volver</button>
                     <button class="create"> Crear </button>
-                </div>`;
+                </div>
+				</div>`;
         }
 
 
@@ -317,7 +327,8 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
             autor: document.getElementById("autor").value, 
             miniatura: document.getElementById("miniatura").value, 
             resu: document.getElementById("resu").value, 
-            audio: document.getElementById("audio").value};
+            audio: document.getElementById("audio").value,
+			escritor: document.getElementById("escritor").value};
 
             mis_resumenes.push(resumen_nuevo);
             localStorage.mis_resumenes = JSON.stringify(mis_resumenes);
@@ -334,6 +345,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
             mis_resumenes[i].titulo    = document.getElementById('titulo').value;
             mis_resumenes[i].autor  = document.getElementById('autor').value;
             mis_resumenes[i].miniatura = document.getElementById('miniatura').value;
+			mis_resumenes[i].escritor = document.getElementById('escritor').value;
             localStorage.mis_resumenes = JSON.stringify(mis_resumenes);
             indexContr();
         };
@@ -383,7 +395,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
    
     <h1><p class="titleResu">Resumen.es</p>
 	
-	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 	
 	<b><?php echo htmlspecialchars($_SESSION["username"]); ?></b> <button><a href="reset-password.php">Reset Your Password</a></button> <button><a href="logout.php">Sign Out of Your Account</a></button> </h1>
 
