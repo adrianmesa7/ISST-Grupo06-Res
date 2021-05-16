@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+	<link rel="icon" type="image/png" href="img/logo.png">
+    <title>Login</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+       body, html {
+	height: 98.6%;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+.bg {
+	background-image: url("img/bg.jpg");
+	filter: blur(10x);
+	-webkit-filter: blur(10px);
+
+	height: 100%;
+
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.container {
+	background-color: rgb(0,0,0);
+	background-color: rgba(0,0,0, 0.55);
+	color: white;
+	border: 3px solid #f1f1f1;
+	position: absolute;
+	top: 48%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	z-index: 2;
+	width: 60%;
+	height: 88%;
+	padding: 20px;
+	text-align: center;
+}
+
+.main{
+	position: absolute;
+	top: 49.5%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	z-index: 2;
+	width: 90%;
+	height: 92%;
+	padding: 20px;	
+}
+
+.logo {
+	width: 55%;	
+	margin-top: 3%;
+}
+
+.info {
+	margin-top: 10%;
+}
+
+.contact {
+	margin-top: 10%;
+}
+
+p {
+    font-family: 'Montserrat';
+	font-size: 18px;
+	/*color: white;*/
+}
+
+a:link {
+  text-decoration: none;
+  color: #97c1cc;
+}
+a:visited {
+  text-decoration: none;
+  color: #97c1cc;
+}
+a:hover {
+  text-decoration: none;
+  color: #69858c;
+}
+a:active {
+  text-decoration: none;
+  color: #69858c;
+}
+    </style>
+</head>
+<body>
+ <div class="bg"></div>
+
+<div class="container">
+		
+	<div class="main">
+		<img src="img/logo.png" width="40%"> 
+        <h2>Login</h2>
+        <p>Inicie sesion para entrar en la web.</p>
+
+        <form action="FormLoginServlet">
+			<input type="text" name="email" placeholder="Email">
+			<input type="password" name="password" placeholder="Contraseña">
+			<button type="submit">Entrar</button>
+		</form>
+	</div>
+</div>
+</body>
+</html>

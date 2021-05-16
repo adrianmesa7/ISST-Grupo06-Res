@@ -1,0 +1,106 @@
+body { --primary: #b58664; --secondary: #020a0e; margin: 0px; 
+        
+			background-image: url("img/bg2.jpg");
+		
+			height: 100vh;
+		
+			background-position: center;
+			background-repeat: no-repeat;
+			background-size: cover;
+		}
+		
+		h1 {
+            font-family: 'Garamond', arial;
+            font-size: 10px;
+			font-weight: 10;
+            text-shadow: 4px 4px 4px rgb(102, 75, 55);
+            }
+        h2  {
+            text-align: center;
+            font-family: 'Garamond', arial;
+            font-size: 18px;
+            text-shadow: 4px 4px 4px #aaa;
+			color: black;
+            }
+
+		.titleResu {
+			font-size: 70px;
+			font-weight: 300;
+			display:inline;
+		}
+		
+        div.field{
+            text-align: center;
+            font-size: 14px;
+            
+        }
+        
+        div.busqueda{
+            text-align: center;
+            width: 70%;
+            margin-left: 15%;
+            margin-bottom: 30px;
+            margin-top: 15px;
+        }
+
+        button { 
+            -webkit-font-smoothing: antialiased;
+            display: inline-block;
+            text-decoration: none;
+            margin: 2px;
+            color: white;
+            background: rgb(102, 75, 55);
+            border: 1px solid var(--primary);
+            height: 20px;
+            font-size: 9px;
+            text-transform: uppercase;
+            cursor: pointer;
+            transition: ease-in 0.2s all;
+            padding: 0 8px 0 8px;
+        }
+		
+		
+		a { color: white;
+			text-decoration: none;
+		}
+		
+        div#main {padding: 10px;}
+        input {margin-bottom: 5px; margin-top: 2px; padding: 4px; font-size: 12px; }
+        h1 {background: var(--primary); color: white; font-weight: 300; text-transform: uppercase; font-size: 20px; margin: 0px; padding: 15px;}
+        h2 { margin-block-start: 0px; margin-block-end: 10px; font-size: 20px; position:center;}
+        button:hover { background: var(--primary); color: white; }
+        div.actions { margin-top: 10px; text-align: center; font-size: 16px;}
+        div.resumen { background-color: rgba(227, 206, 193, 0.75);  display: inline-block; width: auto; padding: 10px; box-shadow: 2px 2px 7px #020a0e; margin: 5px;}
+        div.resumen div.resumen-img {width: 200px; height: auto; min-height: 200px; cursor: pointer; border-color: #020a0e;} 
+        div.resumen div.resumen-img img {align-items: center; width: inherit; height: 160px;}
+        div.resumen div.title {text-align: center; overflow: hidden; text-overflow: ellipsis; width: 200px; white-space: nowrap; }
+        div.field {color: black; text-transform: uppercase; font-size: 12px;}
+        div.textoresu {margin-left: 250px; margin-right: 250px; text-align: justify;}
+		div.textoresucontainer {background-color:rgba(227, 206, 193, 0.75); box-shadow: 2px 2px 7px #020a0e; color: black;}
+        .cuadro {width: 300px; height: 200px;}
+        .titulo {width: 300px;}
+    
+    /* Estrellas */
+
+        p.clasificacion {
+        position: relative;
+        overflow: hidden;
+        display: inline-block;
+      }
+
+      p.clasificacion input {
+        position: absolute;
+        top: -100px;
+      }
+
+      p.clasificacion label {
+       float: right;
+       color: #333;
+       font-size: 30px;
+      }
+
+      p.clasificacion label:hover,
+      p.clasificacion label:hover ~ label,
+      p.clasificacion input:checked ~ label {
+      color: #dd4;
+      }  
