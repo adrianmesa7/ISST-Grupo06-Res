@@ -35,13 +35,13 @@ public class RESUMENDAOImplementation implements RESUMENDAO{
 	}
 	
 	@Override
-	public RESUMEN read (String email) {
+	public RESUMEN read (String title) {
 		Session session = SessionFactoryService.get().openSession();
 		session.beginTransaction();
-		RESUMEN tfg = session.get(RESUMEN.class, email);
+		RESUMEN resumen = session.get(RESUMEN.class, title);
 		session.getTransaction().commit();
 		session.close();
-		return tfg;
+		return resumen;
 	}
 	
 	@Override
@@ -68,7 +68,7 @@ public class RESUMENDAOImplementation implements RESUMENDAO{
 	@SuppressWarnings("unchecked")
 	@Override
 	public List<RESUMEN> readAll() {
-			List<RESUMEN> resumenes = new ArrayList<RESUMEN> ();
+		List<RESUMEN> resumenes = new ArrayList<RESUMEN> ();
 		Session session = SessionFactoryService.get().openSession();
 		session.beginTransaction();
 		resumenes.addAll(session.createQuery("from RESUMEN").list());

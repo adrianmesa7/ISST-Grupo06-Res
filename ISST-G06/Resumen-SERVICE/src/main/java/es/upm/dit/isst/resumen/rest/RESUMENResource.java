@@ -17,7 +17,10 @@ import java.util.List;
 import es.upm.dit.isst.resumen.dao.RESUMENDAOImplementation;
 import es.upm.dit.isst.resumen.model.RESUMEN;
 
-@Path("/TFGs")
+import org.glassfish.jersey.client.ClientConfig;
+import org.glassfish.jersey.jsonp.JsonProcessingFeature;
+
+@Path("/Resumenes")
 public class RESUMENResource {
 	
 	@GET
@@ -33,7 +36,7 @@ public class RESUMENResource {
 	public Response create(RESUMEN tnew) throws URISyntaxException {
 		RESUMEN t = RESUMENDAOImplementation.getInstance().create(tnew);
 	    if (t != null) {
-	            URI uri = new URI("/RESUMEN-SERVICE/rest/RESUMENES/" + t.getEmail());
+	            URI uri = new URI("/RESUMEN-SERVICE/rest/Resumenes/" + t.getTitle());
 	            return Response.created(uri).build();
 	    }
 	    return Response.status(Response.Status.NOT_FOUND).build();
@@ -45,7 +48,7 @@ public class RESUMENResource {
     public Response read(@PathParam("id") String id) {
 		RESUMEN t = RESUMENDAOImplementation.getInstance().read(id);
         if (t == null)
-          return Response.status(Response.Status.NOT_FOUND).build();
+        	return Response.status(Response.Status.NOT_FOUND).build();
         return Response.ok(t, MediaType.APPLICATION_JSON).build();
     }        
 
@@ -56,8 +59,8 @@ public class RESUMENResource {
     public Response update(@PathParam("id") String id, RESUMEN t) {
             System.out.println("Update request for" + id + " " + t.toString());
             RESUMEN told = RESUMENDAOImplementation.getInstance().read(id);
-        if ((told == null) || (! told.getEmail().contentEquals(t.getEmail())))
-          return Response.notModified().build();
+        if ((told == null) || (! told.getEmail().contentEquals(t.getTitle())))
+        	return Response.notModified().build();
         RESUMENDAOImplementation.getInstance().update(t);
         return Response.ok().build();                
     }
@@ -68,7 +71,7 @@ public class RESUMENResource {
     public Response delete(@PathParam("id") String  id) {
     	RESUMEN rold = RESUMENDAOImplementation.getInstance().read(id);
         if (rold == null)
-            return Response.notModified().build();
+        	return Response.notModified().build();
         RESUMENDAOImplementation.getInstance().delete(rold);
         return Response.ok().build();
     }
